@@ -1,0 +1,37 @@
+scalar NVR
+
+enum BuildStatus {
+  QUEUED
+  ACCEPTED
+  RUNNING
+  FAILED
+  COMPLETE
+}
+
+type ArtifactBuild {
+  id: ID!
+  status: BuildStatus!
+}
+
+enum ArtifactStatus {
+  BUILDING
+  TESTING
+  FAILED
+  FINISHED
+}
+
+type Artifact {
+  id: ID!
+  nvr: String!
+  build: ArtifactBuild!
+  status: ArtifactStatus!
+}
+
+type Query {
+  artifactById(id: ID!): Artifact
+  artifactsByNvr(nvr: NVR!): [Artifact!]
+}
+
+schema {
+  query: Query
+}

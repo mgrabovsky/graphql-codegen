@@ -1,0 +1,28 @@
+{
+  "name": "graphql-codegen",
+  "version": "0.0.1",
+  "description": "An experiment with GraphQL code generation",
+  "main": "index.ts",
+  "scripts": {
+    "codegen": "graphql-codegen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgrabovsky/graphql-codegen.git"
+  },
+  "author": "Matěj Grabovský <matej@mgrabovsky.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgrabovsky/graphql-codegen/issues"
+  },
+  "homepage": "https://github.com/mgrabovsky/graphql-codegen#readme",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^3.2.2",
+    "@graphql-codegen/client-preset": "^2.1.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.10"
+  }
+}
